@@ -19,10 +19,12 @@ public class ajustes_userInfo extends Panel_userInfo{
     public ajustes_userInfo(int x_size_tabla,int x_size_contenedor ,int y_size_contenedor){
      this.setLayout(null);
      this.setBounds(x_size_tabla,0,x_size_contenedor - x_size_tabla, y_size_contenedor);
+  
+     
+     
      
      this.PANEL_barrasuperior.setLayout(null);
      this.PANEL_barrasuperior.setBounds(0,0,this.getWidth(),25);
-         this.setLayout(null);
          this.BTO_close.setBounds(this.PANEL_barrasuperior.getWidth() - this.PANEL_barrasuperior.getHeight(), 0 , this.PANEL_barrasuperior.getHeight(), this.PANEL_barrasuperior.getHeight());
     
      
@@ -35,14 +37,14 @@ public class ajustes_userInfo extends Panel_userInfo{
          this.LBL_nombre.setLocation((this.getWidth() - this.LBL_nombre.getSize().width)/2,this.BTO_foto.getLocation().y + this.BTO_foto.getSize().height);
               
     // this.contador_altura=this.PANEL_barrasuperior.getHeight() + this.PANEL_basicinfo.getHeight();
-         
-     //this.JSPANE_advinfo.setLayout(null);
+     //this.JSPANE_advinfo.setLayout(null);    
      this.JSPANE_advinfo.setBounds(0,this.PANEL_basicinfo.getLocation().y + this.PANEL_basicinfo.getHeight(),this.getWidth(),this.getHeight() - (this.PANEL_barrasuperior.getHeight() + this.PANEL_basicinfo.getHeight()));
-     
-     this.PANEL_advinfo.setLayout(null);
-     this.PANEL_advinfo.setBounds(0,0,50,50);
-     this.PANEL_advinfo.show(true);
-     
+      
+     /*
+     this.PANEL_contenedor.setLayout(null);
+     this.PANEL_contenedor.setBounds(0,0,50,50);
+     this.PANEL_contenedor.show(true);
+     */
  //    this.PANEL_ci.setLayout(null);
    //    this.PANEL_ci.setBounds(0,0,70,25);
      //         this.PANEL_ci.setBackground(Color.red);

@@ -13,7 +13,10 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import market2.Classes.Ajustes.ajustes_gestion_de_usuarios;
+import market2.Classes.Ajustes.ajustes_userInfo;
 import market2.Classes.Fun_BTObuscar;
+import market2.Classes.Fun_BTOmodificar;
 import static market2.Forms.main_form_admin.gestion_usuarios;
 
 /**
@@ -38,6 +41,8 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PM_userInfo = new javax.swing.JPopupMenu();
+        MI_userinfo = new javax.swing.JMenuItem();
         panel_set = new javax.swing.JPanel();
         txt_buscar = new javax.swing.JTextField();
         CB_lista = new javax.swing.JComboBox<>();
@@ -47,6 +52,29 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
         panel_get = new javax.swing.JPanel();
         Panel_JS = new javax.swing.JScrollPane();
         JT_usuarios = new javax.swing.JTable();
+
+        PM_userInfo.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+                PM_userInfoPopupMenuWillBecomeVisible(evt);
+            }
+        });
+
+        MI_userinfo.setText("Info");
+        MI_userinfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MI_userinfoMouseClicked(evt);
+            }
+        });
+        MI_userinfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_userinfoActionPerformed(evt);
+            }
+        });
+        PM_userInfo.add(MI_userinfo);
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -133,6 +161,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        JT_usuarios.setComponentPopupMenu(PM_userInfo);
         Panel_JS.setViewportView(JT_usuarios);
 
         javax.swing.GroupLayout panel_getLayout = new javax.swing.GroupLayout(panel_get);
@@ -156,7 +185,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panel_set, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(19, 19, 19))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,12 +213,30 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
        repaint();    
     }//GEN-LAST:event_bto_buscarActionPerformed
 
+    private void PM_userInfoPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_PM_userInfoPopupMenuWillBecomeVisible
+
+        Fun_BTOmodificar instancia = new Fun_BTOmodificar(this.JT_usuarios,this.JT_usuarios.getMousePosition());
+            instancia.setCI(instancia.capturaCI(this.JT_usuarios));    }//GEN-LAST:event_PM_userInfoPopupMenuWillBecomeVisible
+
+    private void MI_userinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_userinfoActionPerformed
+     
+
+ 
+     
+    }//GEN-LAST:event_MI_userinfoActionPerformed
+
+    private void MI_userinfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MI_userinfoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MI_userinfoMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BTO_delete;
     public javax.swing.JButton BTO_register;
     public javax.swing.JComboBox<String> CB_lista;
     public javax.swing.JTable JT_usuarios;
+    public javax.swing.JMenuItem MI_userinfo;
+    public javax.swing.JPopupMenu PM_userInfo;
     public javax.swing.JScrollPane Panel_JS;
     public javax.swing.JButton bto_buscar;
     public javax.swing.JPanel panel_get;
