@@ -13,8 +13,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import market2.Classes.Ajustes.ajustes_gestion_de_usuarios3;
-import market2.Classes.Ajustes.ajustes_userInfo3;
+
 import market2.Classes.Fun_BTObuscar;
 import market2.Classes.Fun_BTOmodificar;
 import static market2.Forms.main_form_admin.gestion_usuarios;

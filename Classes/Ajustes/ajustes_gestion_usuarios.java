@@ -90,7 +90,6 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
 
 }
    public void panelGet_original(){
-     this.userinfo.setOpaque(false);
      userinfo=null;
      
      int x_location = 0; 

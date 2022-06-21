@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
-import market2.Classes.Ajustes.ajustes_gestion_de_usuarios3;
 import market2.Classes.Ajustes.ajustes_form_admin;
 import market2.Classes.Ajustes.ajustes_gestion_usuarios;
 import market2.Classes.Ajustes.ajustes_horarios;
