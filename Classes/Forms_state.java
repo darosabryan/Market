@@ -15,10 +15,7 @@ import market2.Classes.Ajustes.ajustes_LogIN;
 
 public class Forms_state {
 private ajustes_form_admin main_form = new ajustes_form_admin();
-//private LogIN login = new LogIN();
 private ajustes_LogIN login = new ajustes_LogIN();
-
-
 private SignIN signin =  new SignIN();
 private ajustes_Edit_date modificar = new ajustes_Edit_date();
 
@@ -46,8 +43,7 @@ public void state_ajustes_Edit_date(boolean state){
  modificar.CB_hour2.setSelectedIndex(0);
  modificar.CB_minuts2.setSelectedIndex(0);
  modificar.BTO_close.setIcon(new ImageIcon("C:\\Users\\Raul Games\\Documents\\NetBeansProjects\\Market2\\src\\market2\\imagenes\\window-close.png"));
-
-
+ 
  modificar.show(state);
 
 }

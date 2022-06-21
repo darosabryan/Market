@@ -7,14 +7,15 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
-import market2.Classes.Ajustes.ajustes_gestion_de_usuarios;
+import market2.Classes.Ajustes.ajustes_gestion_de_usuarios3;
 import market2.Classes.Ajustes.ajustes_form_admin;
+import market2.Classes.Ajustes.ajustes_gestion_usuarios;
 import market2.Classes.Ajustes.ajustes_horarios;
 import market2.Classes.Fun_BTObuscar;
 import market2.Paneles.Panel_gestion_de_usuarios;
 
 public class main_form_admin extends javax.swing.JFrame {
-public static ajustes_gestion_de_usuarios gestion_usuarios = new ajustes_gestion_de_usuarios();
+public static ajustes_gestion_usuarios gestion_usuarios = new ajustes_gestion_usuarios();
 public static ajustes_horarios horarios = new ajustes_horarios();
 
 public static ajustes_form_admin size = new ajustes_form_admin();

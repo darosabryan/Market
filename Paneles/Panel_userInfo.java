@@ -115,7 +115,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
 
         JSPANE_advinfo.setBackground(new java.awt.Color(255, 255, 255));
 
-        PANEL_contenedor.setBackground(new java.awt.Color(0, 204, 204));
+        PANEL_contenedor.setBackground(new java.awt.Color(255, 255, 255));
 
         TXT_ci.setBorder(null);
 

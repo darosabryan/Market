@@ -16,25 +16,26 @@ import market2.Forms.main_form_admin;
 import market2.Paneles.Panel_gestion_de_usuarios;
 import market2.Paneles.Panel_userInfo;
 
-public class ajustes_gestion_de_usuarios extends Panel_gestion_de_usuarios{
- private Panel_gestion_de_usuarios instancia_panel_busqueda =  new Panel_gestion_de_usuarios();   
+public class ajustes_gestion_de_usuarios3 extends Panel_gestion_de_usuarios{
  private ajustes_form_admin dimensiones_form_admin = new ajustes_form_admin();
- JPanel userinfo_main = new JPanel();
+ ajustes_userInfo3 userinfo;
+ String tipo;
+ 
  
  private int x_size_panelSet = dimensiones_form_admin.x_panel_contenedor;
  private int y_size_panelSet = 50;
  
  private int x_size_panelGet = this.x_size_panelSet;
  private int y_size_panelGet = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
-  JButton boton_close = new JButton();
  
- public ajustes_gestion_de_usuarios(){
+ public ajustes_gestion_de_usuarios3(){
  Panel_main();
  panelSet();
- panelGet("Original");
- size_acomodado(this.MI_userinfo);
- size_original(this.boton_close);
+ panelGet("Acomodado");
 
+ panelGet("Original");
+ size_original();
+ size_acomodado(this.MI_userinfo);
  }
 
 public void Panel_main(){
@@ -98,6 +99,7 @@ public void panelSet(){
 }
 
 public void panelGet(String tipo){
+this.tipo = tipo;    
 
  if(tipo=="Original"){
  //Panel_get
@@ -112,6 +114,11 @@ public void panelGet(String tipo){
  this.Panel_JS.setSize(this.panel_get.getWidth(), this.panel_get.getHeight());
  this.Panel_JS.setLocation(0, 0);
  this.Panel_JS.show(true);
+ 
+ this.JT_usuarios.setSize(this.panel_get.getWidth(), this.panel_get.getHeight());
+ this.JT_usuarios.setLocation(0, 0);
+ this.JT_usuarios.show(true);
+ this.repaint();
  }
  
  if(tipo=="Acomodado"){
@@ -133,22 +140,27 @@ public void panelGet(String tipo){
 
  this.Panel_JS.show(true);
  
-ajustes_userInfo userinfo = new ajustes_userInfo(this.Panel_JS.getSize().width,this.panel_get.getSize().width,this.panel_get.getSize().height);
-this.panel_get.add(userinfo);
+ userinfo = new ajustes_userInfo3(this.Panel_JS.getSize().width,this.panel_get.getSize().width,this.panel_get.getSize().height);
+ this.panel_get.add(userinfo);
+
  }
 
+ 
 }
 
-public void size_original(JButton boton_close){
+public void size_original(){
+
 MouseListener funcion = new MouseListener(){
     @Override
     public void mouseClicked(MouseEvent e) {
         panelGet("Original");
+       
 
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
+      
 
     }
 
@@ -164,11 +176,15 @@ MouseListener funcion = new MouseListener(){
     public void mouseExited(MouseEvent e) {
     }
 };
+// if(tipo=="Acomodado"){   
 
-boton_close.addMouseListener(funcion);
+this.userinfo.BTO_close.addMouseListener(funcion);
+
+ //}
 }
 
-public void size_acomodado(JMenuItem userinfo){
+
+public void size_acomodado(JMenuItem menuitem){
 MouseListener funcion = new MouseListener(){
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -177,7 +193,8 @@ MouseListener funcion = new MouseListener(){
 
     @Override
     public void mousePressed(MouseEvent e) {
-                panelGet("Acomodado");
+
+        panelGet("Acomodado");
     }
 
     @Override
@@ -193,7 +210,7 @@ MouseListener funcion = new MouseListener(){
     }
 };
 
-userinfo.addMouseListener(funcion);
+menuitem.addMouseListener(funcion);
 }
 
 
