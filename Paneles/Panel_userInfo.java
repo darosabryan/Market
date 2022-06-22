@@ -46,7 +46,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
         TXT_correo = new javax.swing.JTextField();
         BTO_correo = new javax.swing.JButton();
         PANEL_usuario = new javax.swing.JPanel();
-        TXT_usuarios = new javax.swing.JTextField();
+        TXT_usuario = new javax.swing.JTextField();
         BTO_usuario = new javax.swing.JButton();
         PANEL_fecha = new javax.swing.JPanel();
         TXT_fecha = new javax.swing.JTextField();
@@ -236,7 +236,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        TXT_usuarios.setBorder(null);
+        TXT_usuario.setBorder(null);
 
         BTO_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/market2/imagenes/user-solid-24.png"))); // NOI18N
         BTO_usuario.setBorder(null);
@@ -251,7 +251,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(BTO_usuario)
                 .addGap(19, 19, 19)
-                .addComponent(TXT_usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TXT_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         PANEL_usuarioLayout.setVerticalGroup(
@@ -259,7 +259,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PANEL_usuarioLayout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(PANEL_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TXT_usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TXT_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTO_usuario))
                 .addContainerGap())
         );
@@ -404,6 +404,6 @@ public class Panel_userInfo extends javax.swing.JPanel {
     public javax.swing.JTextField TXT_direction;
     public javax.swing.JTextField TXT_fecha;
     public javax.swing.JTextField TXT_telefono;
-    public javax.swing.JTextField TXT_usuarios;
+    public javax.swing.JTextField TXT_usuario;
     // End of variables declaration//GEN-END:variables
 }
