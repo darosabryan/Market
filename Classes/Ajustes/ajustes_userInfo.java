@@ -36,7 +36,8 @@ public class ajustes_userInfo extends Panel_userInfo{
         } 
 
         public void panelAdvanceInfo(){
-
+            
+                 
 
         }
 }

@@ -9,16 +9,14 @@ import market2.Paneles.Panel_gestion_de_usuarios;
 public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
     //ATRIBUTOS
     private ajustes_form_admin dimensiones_form_admin = new ajustes_form_admin();
-         private int x_size_panelSet = dimensiones_form_admin.x_panel_contenedor;
-         private int y_size_panelSet = 50;
- 
-         private int x_size_panelGet = this.x_size_panelSet;
-         private int y_size_panelGet = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
+    private int x_size_panelSet = dimensiones_form_admin.x_panel_contenedor;
+    private int y_size_panelSet = 50;
+
+    private int x_size_panelGet = this.x_size_panelSet;
+    private int y_size_panelGet = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
     
-    private  ajustes_userInfo userinfo;
-    private JPanel userinfo_auxilar;
-    
-    
+    public ajustes_userInfo userinfo;
+       
     //CONSTRUCTOR
     public ajustes_gestion_usuarios(){
         Panel_main();
@@ -90,6 +88,9 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
 
 }
    public void panelGet_original(){
+     if(userinfo != null){
+     userinfo.show(false);
+     }
      userinfo=null;
      
      int x_location = 0; 
@@ -143,13 +144,13 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
      original();
     
    }
-   
 
 public void original(){
     MouseListener funcion = new MouseListener(){
     @Override
     public void mouseClicked(MouseEvent e) {
         panelGet_original();
+        System.out.println(userinfo == null);
     }
 
     @Override
@@ -183,6 +184,7 @@ public void acomodado(){
         @Override
         public void mousePressed(MouseEvent e) {
             panelGet_acomodado();
+
 
         }
 
