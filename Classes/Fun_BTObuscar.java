@@ -21,8 +21,12 @@ public Fun_BTObuscar(JTable tabla,String busqueda, String filtro){
     this.busqueda =busqueda;
     this.filtro = filtro;
 }
+public String full_data_usuario(){
+return "select * from usuarios";
+}
+
 public String carga_usuarios_busqueda(){
-return "select usu.name,usu.lastname,usu.ci,t_usu.nombre_tipo FROM usuarios as usu join tipo_usuario as t_usu WHERE usu.tipo = t_usu.id_tipo";
+return "select usu.ci,usu.name,usu.lastname,t_usu.nombre_tipo FROM usuarios as usu join tipo_usuario as t_usu WHERE usu.tipo = t_usu.id_tipo";
 
 }
 //tengo que obtener la cedula dependiendo de la id_horarios que le corresponda a cada usuario
@@ -43,7 +47,7 @@ return  "select usu.ci, usu.lastname, hor.lun, hor.mar, hor.mie, hor.jue, hor.vi
 }
 
 public Object[] datos_modelo_busqueda(ResultSet consulta) throws SQLException{
-return new Object[]{consulta.getString("name"), consulta.getString("lastname"),consulta.getString("ci"),consulta.getString("nombre_tipo")};
+return new Object[]{consulta.getString("ci"),consulta.getString("name"), consulta.getString("lastname"),consulta.getString("nombre_tipo")};
                        
 }
 

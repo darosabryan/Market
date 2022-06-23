@@ -15,7 +15,8 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
     private int x_size_panelGet = this.x_size_panelSet;
     private int y_size_panelGet = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
     
-    public ajustes_userInfo userinfo;
+    private ajustes_userInfo userinfo;
+    private boolean active= false;
        
     //CONSTRUCTOR
     public ajustes_gestion_usuarios(){
@@ -91,7 +92,7 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
      if(userinfo != null){
      userinfo.show(false);
      }
-     userinfo=null;
+    // userinfo=null;
      
      int x_location = 0; 
      int y_location = this.y_size_panelSet;
@@ -117,10 +118,12 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
     int x_size = this.panel_get.getSize().width - this.Panel_JS.getSize().width;
     int y_size = this.panel_get.getSize().height ;
     
-   
+
     userinfo = new ajustes_userInfo(x_pos,y_pos,x_size,y_size);
     this.panel_get.add(userinfo);
-    
+    active= true;
+   
+   
    }
    
    public void panelGet_acomodado(){
@@ -139,8 +142,13 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
      this.Panel_JS.setLocation(0, 0);
      this.JT_usuarios.setSize((x_size*70)/100, y_size);
      this.JT_usuarios.setLocation(0, 0);
-   
-     initUserInfo();
+     
+     if(active == false){
+         initUserInfo();
+      }else{
+         userinfo.show(true);
+     }
+     
      original();
     
    }
@@ -150,7 +158,6 @@ public void original(){
     @Override
     public void mouseClicked(MouseEvent e) {
         panelGet_original();
-        System.out.println(userinfo == null);
     }
 
     @Override

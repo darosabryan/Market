@@ -75,13 +75,14 @@ public class ajustes_userInfo extends Panel_userInfo{
              
              int txt_size_x = panel_size_x - boton_size_x;
              int txt_size_y = panel_size_y;
-             int txt_pos_x = panel_size_x;
+             int txt_pos_x = boton_size_x;
              int txt_pos_y = 0;
              
             panel.setLayout(null);
             panel.setBounds(panel_pos_x,panel_pos_y,panel_size_x,panel_size_y);
             boton.setBounds(boton_pos_x,boton_pos_y,boton_size_x,boton_size_y);
             txt.setBounds(txt_pos_x,txt_pos_y,txt_size_x,txt_size_y);
+            txt.show(true);
             
             panel_pos_y=panel_pos_y + panel_size_y;
         }

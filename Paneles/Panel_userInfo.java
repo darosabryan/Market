@@ -95,6 +95,7 @@ public class Panel_userInfo extends javax.swing.JPanel {
         BTO_close.setBorder(null);
         BTO_close.setBorderPainted(false);
         BTO_close.setContentAreaFilled(false);
+        BTO_close.setFocusPainted(false);
 
         javax.swing.GroupLayout PANEL_barrasuperiorLayout = new javax.swing.GroupLayout(PANEL_barrasuperior);
         PANEL_barrasuperior.setLayout(PANEL_barrasuperiorLayout);
@@ -117,7 +118,13 @@ public class Panel_userInfo extends javax.swing.JPanel {
 
         PANEL_contenedor.setBackground(new java.awt.Color(255, 255, 255));
 
+        TXT_ci.setBackground(new java.awt.Color(255, 255, 255));
         TXT_ci.setBorder(null);
+        TXT_ci.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TXT_ciActionPerformed(evt);
+            }
+        });
 
         BTO_ci.setIcon(new javax.swing.ImageIcon(getClass().getResource("/market2/imagenes/id-card-regular-24.png"))); // NOI18N
         BTO_ci.setBorder(null);
@@ -377,6 +384,10 @@ public class Panel_userInfo extends javax.swing.JPanel {
     private void BTO_fotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_fotoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BTO_fotoActionPerformed
+
+    private void TXT_ciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TXT_ciActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TXT_ciActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
