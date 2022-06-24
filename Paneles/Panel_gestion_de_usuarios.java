@@ -219,10 +219,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
 
     private void MI_userinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_userinfoActionPerformed
      Fun_BTOmodificar instancia = new Fun_BTOmodificar(null,null);
-     System.out.println(instancia.getCI());
-
- 
-     
+    
     }//GEN-LAST:event_MI_userinfoActionPerformed
 
     private void MI_userinfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MI_userinfoMouseClicked

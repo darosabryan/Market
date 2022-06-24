@@ -222,34 +222,5 @@ bto_form_admin_cerrar.addMouseListener(animation);
 
 }
 
-public void recargar_AjuGesUsu(boolean state){
-    
-MouseListener funcion = new MouseListener(){
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        if(state == true){
-        System.out.println("perrito malvado");
-        
-        }
-    }
 
-    @Override
-    public void mousePressed(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-    }
-};
-      this.add(gestion_usuarios.);
-
-}
 }
