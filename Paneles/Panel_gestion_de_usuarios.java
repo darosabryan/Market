@@ -153,7 +153,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -218,7 +218,6 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
             instancia.setCI(instancia.capturaCI(this.JT_usuarios));    }//GEN-LAST:event_PM_userInfoPopupMenuWillBecomeVisible
 
     private void MI_userinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_userinfoActionPerformed
-     Fun_BTOmodificar instancia = new Fun_BTOmodificar(null,null);
     
     }//GEN-LAST:event_MI_userinfoActionPerformed
 

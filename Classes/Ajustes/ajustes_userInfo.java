@@ -34,8 +34,8 @@ public class ajustes_userInfo extends Panel_userInfo{
                 this.BTO_foto.setSize(70,70);
                 this.BTO_foto.setLocation((this.getWidth() - this.BTO_foto.size().width)/2,5);
 
-                this.LBL_nombre.setSize(50,10);
-                this.LBL_nombre.setLocation((this.getWidth() - this.LBL_nombre.getSize().width)/2,this.BTO_foto.getLocation().y + this.BTO_foto.getSize().height);
+                this.TXT_nombre.setSize(this.getWidth(),25);
+                this.TXT_nombre.setLocation(0,this.BTO_foto.getLocation().y + this.BTO_foto.getSize().height);
 
 
         } 
@@ -54,10 +54,6 @@ public class ajustes_userInfo extends Panel_userInfo{
             acomodandoPanelesAdvanceInfo(this.PANEL_telefono,this.BTO_telefono,this.TXT_telefono);
             acomodandoPanelesAdvanceInfo(this.PANEL_usuario,this.BTO_usuario,this.TXT_usuario);
             acomodandoPanelesAdvanceInfo(this.PANEL_fecha,this.BTO_fecha,this.TXT_fecha);
-
-
-
-
             
         }
         

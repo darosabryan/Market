@@ -94,7 +94,7 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
 }
    public void panelGet_original(){
      if(userinfo != null){
-     userinfo.show(false);
+         userinfo.show(false);
      }
     // userinfo=null;
      
@@ -125,7 +125,6 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
 
     userinfo = new ajustes_userInfo(x_pos,y_pos,x_size,y_size);
     this.panel_get.add(userinfo);
-    cargando_userInfo();
     active= true;
    
    
@@ -150,8 +149,12 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
      
      if(active == false){
          initUserInfo();
+         cargando_userInfo();
+
       }else{
+         cargando_userInfo();
          userinfo.show(true);
+   
      }
      
      original();
@@ -218,19 +221,11 @@ public void acomodado(){
 }
 
 public void cargando_userInfo(){
-MouseListener funcion = new MouseListener(){
-    @Override
-    public void mouseClicked(MouseEvent e) {
-     
-        
-    }
 
-    @Override
-    public void mousePressed(MouseEvent e) {
         DB_userInfo instancia = new DB_userInfo();
         
         try {
-            set_fullname(instancia.get_nombre() + instancia.get_lastname());
+            set_fullname(instancia.get_nombre() + " " + instancia.get_lastname());
             set_ci(instancia.get_ci());
             set_date(instancia.get_date());
             set_direction(instancia.get_direction());
@@ -241,26 +236,12 @@ MouseListener funcion = new MouseListener(){
         } catch (SQLException ex) {
             Logger.getLogger(ajustes_gestion_usuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
-};
-this.MI_userinfo.addMouseListener(funcion);
+   
 }
 
 public void set_fullname(String texto){
- this.userinfo.LBL_nombre.setText(texto);
+ this.userinfo.TXT_nombre.setText(texto);
+ 
 }
 
 public void set_ci(String texto){
