@@ -20,13 +20,16 @@ import market2.Classes.Ajustes.ajustes_horarios;
 import market2.Classes.Forms_state;
 import market2.Classes.Fun_BTObuscar;
 import market2.Classes.Fun_BTOmodificar;
+import market2.Forms.Edit_date;
 
 /**
  *
  * @author Usuario
  */
 public class Panel_horarios extends javax.swing.JPanel {
-    Forms_state state = new Forms_state();
+    //Forms_state state = new Forms_state();
+     private ajustes_Edit_date edit_date = new ajustes_Edit_date();
+
     /**
      * Creates new form Panel_Horarios
      */
@@ -227,7 +230,8 @@ public class Panel_horarios extends javax.swing.JPanel {
 
          System.out.println(instancia.columna_valida());
          if(instancia.columna_valida()==true){
-            state.state_ajustes_Edit_date(true);    
+            //state.state_ajustes_Edit_date(true);  
+            edit_date.show(true);
         }
         
         
@@ -241,7 +245,8 @@ public class Panel_horarios extends javax.swing.JPanel {
     }//GEN-LAST:event_IM_modificarComponentShown
 
     private void PM_horariosPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_PM_horariosPopupMenuWillBecomeVisible
-        state.state_ajustes_Edit_date(false);    
+       // state.state_ajustes_Edit_date(false);    
+            edit_date.show(false);
 
         Fun_BTOmodificar instancia = new Fun_BTOmodificar(this.JT_horarios,this.JT_horarios.getMousePosition());
             instancia.setCI(instancia.capturaCI(JT_horarios));

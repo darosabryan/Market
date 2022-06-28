@@ -11,13 +11,17 @@ import market2.Classes.Ajustes.ajustes_form_admin;
 import market2.Classes.Ajustes.ajustes_gestion_usuarios;
 import market2.Classes.Ajustes.ajustes_horarios;
 import market2.Classes.Fun_BTObuscar;
+import market2.Classes.Gestor_Paneles;
+import market2.Classes.admin_form_dimensiones;
 import market2.Paneles.Panel_gestion_de_usuarios;
 
 public class main_form_admin extends javax.swing.JFrame {
-public static ajustes_gestion_usuarios gestion_usuarios = new ajustes_gestion_usuarios();
-public static ajustes_horarios horarios = new ajustes_horarios();
+/*public static ajustes_gestion_usuarios gestion_usuarios = new ajustes_gestion_usuarios();
+public static ajustes_horarios horarios = new ajustes_horarios();*/
+public Gestor_Paneles paneles_state = new Gestor_Paneles();
+private admin_form_dimensiones dimension = new admin_form_dimensiones();
 
-public static ajustes_form_admin size = new ajustes_form_admin();
+//public static ajustes_form_admin size = new ajustes_form_admin();
 
     /** Creates new form main_form_admi */
     public main_form_admin() {
@@ -128,6 +132,11 @@ public static ajustes_form_admin size = new ajustes_form_admin();
         BTO_perfil.setBorder(null);
         BTO_perfil.setContentAreaFilled(false);
         BTO_perfil.setFocusPainted(false);
+        BTO_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTO_perfilActionPerformed(evt);
+            }
+        });
         PANEL_perfil.add(BTO_perfil);
 
         PANEL_gestionUsuarios.setLayout(new java.awt.GridLayout(1, 0));
@@ -201,7 +210,8 @@ public static ajustes_form_admin size = new ajustes_form_admin();
     }// </editor-fold>//GEN-END:initComponents
 
     private void bto_form_admin_cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_form_admin_cerrarActionPerformed
-    System.exit(0);   
+    System.exit(0);  
+
     }//GEN-LAST:event_bto_form_admin_cerrarActionPerformed
 
     private void bto_form_admin_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bto_form_admin_cerrarMouseClicked
@@ -211,12 +221,13 @@ public static ajustes_form_admin size = new ajustes_form_admin();
     }//GEN-LAST:event_bto_form_admin_cerrarMouseEntered
 
     private void bto_form_admin_horariosusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_form_admin_horariosusuActionPerformed
-     gestion_usuarios.show(false);
-     horarios.show(true);
-     this.add(horarios);
-     this.horarios.setLocation(size.x_barra_tareas, size.y_barra_superiro);  
+   
+     paneles_state.get_GestorUsuarios().show(false);
+     paneles_state.get_GestorHorarios().show(true);
+     
+     paneles_state.get_GestorHorarios().setLocation(dimension.getX_barra_tareas(), dimension.getY_barra_superiro());  
     
-      Fun_BTObuscar instancia = new Fun_BTObuscar(this.horarios.JT_horarios,this.horarios.TXT_busqueda_horarios.getText(),this.horarios.CB_list_horarios.getSelectedItem().toString());
+      Fun_BTObuscar instancia = new Fun_BTObuscar( paneles_state.get_GestorHorarios().JT_horarios, paneles_state.get_GestorHorarios().TXT_busqueda_horarios.getText(), paneles_state.get_GestorHorarios().CB_list_horarios.getSelectedItem().toString());
     
     try {
             instancia.additemtotable_busqueda(1,instancia.filtrar(instancia.carga_usuarios_horarios()));
@@ -231,12 +242,12 @@ public static ajustes_form_admin size = new ajustes_form_admin();
     }//GEN-LAST:event_BTO_softwareAlmacenActionPerformed
 
     private void BTO_gestionUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_gestionUsuariosActionPerformed
-     horarios.show(false);
-     gestion_usuarios.show(true);
-     this.add(gestion_usuarios);
-     this.gestion_usuarios.setLocation(size.x_barra_tareas, size.y_barra_superiro);  
+   
+     paneles_state.get_GestorHorarios().show(false);
+     paneles_state.get_GestorUsuarios().show(true);
     
-      Fun_BTObuscar instancia = new Fun_BTObuscar(this.gestion_usuarios.JT_usuarios,this.gestion_usuarios.txt_buscar.getText(),this.gestion_usuarios.CB_lista.getSelectedItem().toString());
+     paneles_state.get_GestorUsuarios().setLocation(dimension.getX_barra_tareas(),dimension.getY_barra_superiro());  
+      Fun_BTObuscar instancia = new Fun_BTObuscar( paneles_state.get_GestorUsuarios().JT_usuarios, paneles_state.get_GestorUsuarios().txt_buscar.getText(), paneles_state.get_GestorUsuarios().CB_lista.getSelectedItem().toString());
     
     try {
             instancia.additemtotable_busqueda(0,instancia.filtrar(instancia.carga_usuarios_busqueda()));
@@ -246,6 +257,10 @@ public static ajustes_form_admin size = new ajustes_form_admin();
     }
                         
      this.repaint();    }//GEN-LAST:event_BTO_gestionUsuariosActionPerformed
+
+    private void BTO_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_perfilActionPerformed
+     
+    }//GEN-LAST:event_BTO_perfilActionPerformed
 
     /**
      * @param args the command line arguments

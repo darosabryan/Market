@@ -8,10 +8,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DB_userInfo {
-   private Fun_BTOmodificar instancia = new Fun_BTOmodificar(null,null);
+   private String ci;
+   
+   public DB_userInfo(String ci){
+   this.ci = ci;
+   
+   }
+   
    
    private String query(){
-       return "select usu.ci,usu.name,usu.lastname,t_usu.nombre_tipo,usu.phone,usu.direction, usu.date,usu.email FROM usuarios as usu join tipo_usuario as t_usu WHERE usu.tipo = t_usu.id_tipo and usu.ci =" + this.instancia.getCI();
+       return "select usu.ci,usu.name,usu.lastname,t_usu.nombre_tipo,usu.phone,usu.direction, usu.date,usu.email FROM usuarios as usu join tipo_usuario as t_usu WHERE usu.tipo = t_usu.id_tipo and usu.ci =" + this.ci;
    }
     
   

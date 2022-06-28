@@ -8,33 +8,36 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
 import market2.Classes.DB_userInfo;
+import market2.Classes.Fun_BTOmodificar;
+import market2.Classes.admin_form_dimensiones;
 import market2.Paneles.Panel_gestion_de_usuarios;
 
 public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
     //ATRIBUTOS
-    private ajustes_form_admin dimensiones_form_admin = new ajustes_form_admin();
-    private int x_size_panelSet = dimensiones_form_admin.x_panel_contenedor;
+    private admin_form_dimensiones dimension = new admin_form_dimensiones();
+    private int x_size_panelSet = dimension.getX_panel_contenedor();
     private int y_size_panelSet = 50;
 
     private int x_size_panelGet = this.x_size_panelSet;
-    private int y_size_panelGet = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
+    private int y_size_panelGet = dimension.getY_panel_contenedor() - this.y_size_panelSet;
     
-    private ajustes_userInfo userinfo;
+    public ajustes_userInfo userinfo;
     private boolean active= false;
-       
+    private static String mode;   
+    
     //CONSTRUCTOR
     public ajustes_gestion_usuarios(){
         Panel_main();
         panelSet();
-        panelGet_original();
         
+        panelGet_original();    
         acomodado();
-          
+       
     }
    
    public void Panel_main(){
      this.setLayout(null);
-     this.setSize(dimensiones_form_admin.x_panel_contenedor, dimensiones_form_admin.y_panel_contenedor);
+     this.setSize(dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());
     
    }  
     
@@ -132,7 +135,7 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
    
    public void panelGet_acomodado(){
      int x_size = this.x_size_panelSet;
-     int y_size = dimensiones_form_admin.y_panel_contenedor - this.y_size_panelSet;
+     int y_size = dimension.getY_panel_contenedor() - this.y_size_panelSet;
 
      int x_location = 0; 
      int y_location = this.y_size_panelSet;
@@ -221,8 +224,9 @@ public void acomodado(){
 }
 
 public void cargando_userInfo(){
+        Fun_BTOmodificar instancia_ci = new Fun_BTOmodificar(null,null);
 
-        DB_userInfo instancia = new DB_userInfo();
+        DB_userInfo instancia = new DB_userInfo(instancia_ci.getCI());
         
         try {
             set_fullname(instancia.get_nombre() + " " + instancia.get_lastname());
@@ -272,5 +276,6 @@ public void set_email(String texto){
  this.userinfo.TXT_correo.setText(texto);
 
 }
+
 
 }

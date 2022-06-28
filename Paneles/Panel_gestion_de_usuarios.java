@@ -16,7 +16,6 @@ import javax.swing.table.DefaultTableModel;
 
 import market2.Classes.Fun_BTObuscar;
 import market2.Classes.Fun_BTOmodificar;
-import static market2.Forms.main_form_admin.gestion_usuarios;
 
 /**
  *
@@ -169,11 +168,15 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
             panel_getLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_getLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Panel_JS, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE))
+                .addComponent(Panel_JS, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                .addGap(24, 24, 24))
         );
         panel_getLayout.setVerticalGroup(
             panel_getLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_JS, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+            .addGroup(panel_getLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(Panel_JS, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -192,7 +195,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
                 .addComponent(panel_set, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_get, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(217, 217, 217))
         );
     }// </editor-fold>//GEN-END:initComponents
 

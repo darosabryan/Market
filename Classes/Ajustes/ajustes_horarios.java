@@ -13,16 +13,19 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import market2.Classes.admin_form_dimensiones;
+import market2.Forms.Edit_date;
 import market2.Paneles.Panel_horarios;
 
 public class ajustes_horarios extends Panel_horarios{
- private ajustes_form_admin dimensiones_form_admin = new ajustes_form_admin();
+ // ajustes_form_admin dimensiones_form_admin = new ajustes_form_admin();
+ private admin_form_dimensiones dimension = new admin_form_dimensiones();
  private JPanel frame_modificar = new JPanel();
  static private Point mouse_point_JTable;
   
  private int separador=15;
  //PANEL_set
-     private int x_panel_set = dimensiones_form_admin.x_panel_contenedor;
+     private int x_panel_set = dimension.getX_panel_contenedor();
      private int y_panel_set = 30; // 50
  
  //LISTA
@@ -50,14 +53,14 @@ public class ajustes_horarios extends Panel_horarios{
     private int y_location_BTO_modificar_horarios = y_location_CB_list_horarios;
 
 //PANEL_get
- private int x_size_PANEL_get = this.dimensiones_form_admin.x_contenedor_horarios;
- private int y_size_PANEL_get = dimensiones_form_admin.y_panel_contenedor - this.y_panel_set; 
+ private int x_size_PANEL_get = dimension.getX_contenedor_horarios();
+ private int y_size_PANEL_get = dimension.getY_panel_contenedor() - this.y_panel_set; 
  private int x_location_PANEL_get = 0;
  private int y_location_PANEL_get = y_panel_set;
          
 public ajustes_horarios(){
     this.setLayout(null);
-    this.setSize(dimensiones_form_admin.x_panel_contenedor, dimensiones_form_admin.y_panel_contenedor);
+    this.setSize(dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());
        
     panel_set();
     panel_get();
@@ -150,10 +153,6 @@ this.JT_horarios.addMouseListener(ml);
 
 }
 
-
-
- 
-  
 
 }
 

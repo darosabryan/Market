@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package market2.Forms;
 
 import market2.Classes.Conexion;
 import market2.Classes.Crypto;
 
-/**
- *
- * @author Raul Games
- */
 public class LogIN extends javax.swing.JFrame {
 
     /**

@@ -14,9 +14,9 @@ import market2.Classes.Ajustes.ajustes_Edit_date;
 import market2.Classes.Ajustes.ajustes_LogIN;
 
 public class Forms_state {
-private ajustes_form_admin main_form = new ajustes_form_admin();
-private ajustes_LogIN login = new ajustes_LogIN();
-private SignIN signin =  new SignIN();
+private static ajustes_form_admin main_form = new ajustes_form_admin();
+private static ajustes_LogIN login = new ajustes_LogIN();
+private static SignIN signin =  new SignIN();
 private ajustes_Edit_date modificar = new ajustes_Edit_date();
 
 

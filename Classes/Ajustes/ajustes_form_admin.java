@@ -24,112 +24,53 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import market2.Classes.Fun_BTObuscar;
+import market2.Classes.Gestor_Paneles;
+import market2.Classes.admin_form_dimensiones;
 import market2.Paneles.Panel_gestion_de_usuarios;
 
 
 public class ajustes_form_admin extends main_form_admin {    
 //Medidas del form_admin    
 private JPanel foco;    
-public int x_form_admin=800;
-public int y_form_admin=400;
-
-//Medidas de la barra susperior
-int x_barra_superiro = x_form_admin;
-public int y_barra_superiro = 25;
-
-//Medidas del boton cerrar
-int bto_cerrar = 25;
-
-//Medidas de la barra de tareas
-public int x_barra_tareas = 150;
-int y_barra_tareas = y_form_admin - y_barra_superiro;
-
-//Medidas del panel contenedor
-public int x_panel_contenedor = x_form_admin - x_barra_tareas;
-public int y_panel_contenedor = y_form_admin - y_barra_superiro;
-
-//Medidas del panel busqueda usuarios
- int x_panel_form_admin_busquedausu = x_barra_tareas;
- int y_panel_form_admin_busquedausu = 40;
- int x_paneles_barraTareas = x_barra_tareas;
- int y_paneles_barraTareas = 40;
-
-
-//Medidas del panel horarios usuarios
- int x_panel_form_admin_horariosusu = x_barra_tareas;
- int y_panel_form_admin_horariosusu = 40;
- 
-//Medidas del boton busqueda usuarios
-// int x_bto_form_admin_horariosusu = x_panel_form_admin_horariosusu;
- //int y_bto_form_admin_horariosusu = y_panel_form_admin_horariosusu;
-
-//Medidas del contenedor horarios
- int x_contenedor_horarios = x_panel_contenedor;
- int y_contenedor_horarios = y_panel_contenedor;
-
-//Medidas del contenedor busqueda
- int x_contenedor_busqueda = x_panel_contenedor;
- int y_contenedor_busqueda = y_panel_contenedor;
+admin_form_dimensiones dimensiones = new admin_form_dimensiones();
 
 public JPanel contenedor = new JPanel(); 
-int x_size_contenedor_busqueda = x_panel_contenedor;
+
+int x_size_contenedor_busqueda = dimensiones.getX_panel_contenedor();
 int y_size_contenedor_busqueda = 100; 
 
-private int cantFuncionalidades=4;
 
 public ajustes_form_admin(){    
 this.setLayout(null);
-this.setSize(x_form_admin, y_form_admin);
+this.setSize(dimensiones.getX_form_admin(), dimensiones.getY_form_admin());
 this.setLocationRelativeTo(null); 
 
-this.panel_form_admin_barra_superior.setSize(x_barra_superiro, y_barra_superiro);
+this.panel_form_admin_barra_superior.setSize(dimensiones.getX_barra_superiro(), dimensiones.getY_barra_superiro());
 this.panel_form_admin_barra_superior.setLocation(0, 0);
 
-this.bto_form_admin_cerrar.setSize(bto_cerrar,bto_cerrar);
-this.bto_form_admin_cerrar.setLocation(x_form_admin - bto_cerrar, 0);
+this.bto_form_admin_cerrar.setSize(dimensiones.getBto_cerrar(),dimensiones.getBto_cerrar());
+this.bto_form_admin_cerrar.setLocation(dimensiones.getX_form_admin() - dimensiones.getBto_cerrar(), 0);
 
 this.panel_form_admin_barra_tareas.setLayout(null);
-this.panel_form_admin_barra_tareas.setSize(x_barra_tareas, y_barra_tareas);
-this.panel_form_admin_barra_tareas.setLocation(0, y_barra_superiro);
+this.panel_form_admin_barra_tareas.setSize(dimensiones.getX_barra_tareas(), dimensiones.getY_barra_tareas());
+this.panel_form_admin_barra_tareas.setLocation(0, dimensiones.getY_barra_superiro());
   
  
-  ajutando_barraTareas(0,0,x_paneles_barraTareas,y_paneles_barraTareas, this.PANEL_perfil, new Color(51,51,51));
+  ajutando_barraTareas(0,0,dimensiones.getX_paneles_barraTareas(),dimensiones.getY_paneles_barraTareas(), this.PANEL_perfil, new Color(51,51,51));
   animation_paneles(this.PANEL_perfil,this.BTO_perfil,this);
   
-  ajutando_barraTareas(0,y_paneles_barraTareas*1,x_paneles_barraTareas,y_paneles_barraTareas, this.PANEL_gestionUsuarios, new Color(51,51,51));
+  ajutando_barraTareas(0,dimensiones.getY_paneles_barraTareas()*1,dimensiones.getX_paneles_barraTareas(),dimensiones.getY_paneles_barraTareas(), this.PANEL_gestionUsuarios, new Color(51,51,51));
   animation_paneles(this.PANEL_gestionUsuarios,this.BTO_gestionUsuarios,this);
   
-  ajutando_barraTareas(0,y_paneles_barraTareas*2,x_paneles_barraTareas,y_paneles_barraTareas, this.panel_form_admin_horariosusu, new Color(51,51,51));
+  ajutando_barraTareas(0,dimensiones.getY_paneles_barraTareas()*2,dimensiones.getX_paneles_barraTareas(),dimensiones.getY_paneles_barraTareas(), this.panel_form_admin_horariosusu, new Color(51,51,51));
   animation_paneles(this.panel_form_admin_horariosusu,this.bto_form_admin_horariosusu,this);
  
-  ajutando_barraTareas(0,y_paneles_barraTareas*3,x_paneles_barraTareas,y_paneles_barraTareas, this.PANEL_softwareAlmacen, new Color(51,51,51));
+  ajutando_barraTareas(0,dimensiones.getY_paneles_barraTareas()*3,dimensiones.getX_paneles_barraTareas(),dimensiones.getY_paneles_barraTareas(), this.PANEL_softwareAlmacen, new Color(51,51,51));
   animation_paneles(this.PANEL_softwareAlmacen,this.BTO_softwareAlmacen,this);
- /*
- JPanel[] panel = new JPanel[cantFuncionalidades];
-   panel[0] = this.PANEL_perfil;
-   panel[1] = this.PANEL_gestionUsuarios;
-   panel[2] = this.panel_form_admin_horariosusu;
-   panel[3] = this.PANEL_softwareAlmacen;
  
- int contador = 0;   
- 
-
-for (int i=0;i<cantFuncionalidades;i++){
-contador=y_paneles_barraTareas*i;
-
-ajutando_barraTareas(0,contador,x_paneles_barraTareas,y_paneles_barraTareas,panel[i],new Color(51,51,51));
-//animation_paneles(panel[i], panel[i].getComponent(i),this);
-}
- // ajutando_barraTareas(0,0,x_panel_form_admin_busquedausu,y_panel_form_admin_busquedausu, this.panel_form_admin_busquedausu, new Color(51,51,51));
-  
-
-//  ajutando_barraTareas(0,y_panel_form_admin_busquedausu,x_panel_form_admin_horariosusu,y_panel_form_admin_horariosusu,this.panel_form_admin_horariosusu, new Color(51,51,51));  
-  animation_paneles(panel_form_admin_horariosusu,this.bto_form_admin_horariosusu,this);
-  
-  */
-
 animacion_close();
 
+add_paneles();
 }
 public void ajutando_barraTareas(int x_loca,int y_loca,int x_size,int y_size,JPanel panel,Color color){
 panel.setBounds(x_loca, y_loca, x_size , y_size);
@@ -222,5 +163,16 @@ bto_form_admin_cerrar.addMouseListener(animation);
 
 }
 
+public void add_paneles(){
+    Gestor_Paneles instancia = new Gestor_Paneles();
+
+    this.add(instancia.get_GestorUsuarios());
+    instancia.get_GestorUsuarios().show(false);
+
+    this.add(instancia.get_GestorHorarios());
+    instancia.get_GestorHorarios().show(false);
+
+
+}
 
 }
