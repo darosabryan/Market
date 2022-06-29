@@ -2,9 +2,10 @@ package market2.Classes;
 import market2.Classes.Forms_state;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import market2.Classes.Ajustes.ajustes_LogIN;
 //Primero hay que instalar la libreria JDBC
 ////cacacaca                                        
-public class Conexion {
+public class Conexion{
 public static Forms_state forms = new Forms_state();
 
 public static boolean existUSU(String ci,String pass){
@@ -61,11 +62,18 @@ public void action_LogIN(String ci,String pass){
     
   try{
   if (existUSU(ci,pass)== true){
-  forms.state_LogIN(false);
-
+   login close= new login();
+     /*  Fun_BTOmodificar instancia = new Fun_BTOmodificar(null);
+           instancia.setCI(close.getLogIN().TXT_ci.getText().toString());*/
+       
+       close.getLogIN().show(false);
+  //Antes caputraba la ci en login
   switch(tipoUSU(ci)){
       case "1":
+          
           forms.state_main_form(true);
+          
+          
           break;
       
       case "2":

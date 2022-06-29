@@ -224,10 +224,9 @@ public void acomodado(){
 }
 
 public void cargando_userInfo(){
-        Fun_BTOmodificar instancia_ci = new Fun_BTOmodificar(null,null);
+        Fun_BTOmodificar instancia_ci = new Fun_BTOmodificar(null);
 
         DB_userInfo instancia = new DB_userInfo(instancia_ci.getCI());
-        
         try {
             set_fullname(instancia.get_nombre() + " " + instancia.get_lastname());
             set_ci(instancia.get_ci());

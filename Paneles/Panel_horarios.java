@@ -226,7 +226,7 @@ public class Panel_horarios extends javax.swing.JPanel {
     }//GEN-LAST:event_JT_horariosMouseClicked
 
     private void IM_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IM_modificarActionPerformed
-        Fun_BTOmodificar instancia = new Fun_BTOmodificar(this.JT_horarios,null);
+        Fun_BTOmodificar instancia = new Fun_BTOmodificar(/*this.JT_horarios,*/null);
 
          System.out.println(instancia.columna_valida());
          if(instancia.columna_valida()==true){
@@ -248,7 +248,7 @@ public class Panel_horarios extends javax.swing.JPanel {
        // state.state_ajustes_Edit_date(false);    
             edit_date.show(false);
 
-        Fun_BTOmodificar instancia = new Fun_BTOmodificar(this.JT_horarios,this.JT_horarios.getMousePosition());
+        Fun_BTOmodificar instancia = new Fun_BTOmodificar(/*this.JT_horarios,*/this.JT_horarios.getMousePosition());
             instancia.setCI(instancia.capturaCI(JT_horarios));
             instancia.setColumna(instancia.capturarColumna(JT_horarios));
             System.out.println(this.JT_horarios.getMousePosition());

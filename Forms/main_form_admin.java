@@ -11,6 +11,7 @@ import market2.Classes.Ajustes.ajustes_form_admin;
 import market2.Classes.Ajustes.ajustes_gestion_usuarios;
 import market2.Classes.Ajustes.ajustes_horarios;
 import market2.Classes.Fun_BTObuscar;
+import market2.Classes.Fun_BTOmodificar;
 import market2.Classes.Gestor_Paneles;
 import market2.Classes.admin_form_dimensiones;
 import market2.Paneles.Panel_gestion_de_usuarios;
@@ -259,7 +260,26 @@ private admin_form_dimensiones dimension = new admin_form_dimensiones();
      this.repaint();    }//GEN-LAST:event_BTO_gestionUsuariosActionPerformed
 
     private void BTO_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_perfilActionPerformed
-     
+        paneles_state.get_GestorHorarios().show(false);
+        paneles_state.get_GestorUsuarios().show(false);
+        
+         Fun_BTOmodificar chancha = new Fun_BTOmodificar(null);
+           chancha.setCI(chancha.getCi_login());
+        
+        paneles_state.getUsuario_perfil().show(true);
+        
+
+       paneles_state.getUsuario_perfil().setLocation(dimension.getX_barra_tareas(),dimension.getY_barra_superiro());  
+      Fun_BTObuscar instancia = new Fun_BTObuscar(  paneles_state.getUsuario_perfil().JT_usuarios,  paneles_state.getUsuario_perfil().txt_buscar.getText(),  paneles_state.getUsuario_perfil().CB_lista.getSelectedItem().toString());
+    
+    try {
+            instancia.additemtotable_busqueda(0,instancia.filtrar(instancia.carga_usuarios_busqueda()));
+        
+    } catch (SQLException ex) {
+        Logger.getLogger(main_form_admin.class.getName()).log(Level.SEVERE, null, ex);
+    }
+                        
+     this.repaint(); 
     }//GEN-LAST:event_BTO_perfilActionPerformed
 
     /**

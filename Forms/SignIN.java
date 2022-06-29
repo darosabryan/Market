@@ -370,7 +370,7 @@ public class SignIN extends javax.swing.JFrame {
     }//GEN-LAST:event_TXT_lastnameActionPerformed
 
     private void Accept_signActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Accept_signActionPerformed
-        Conexion enviar  = new Conexion();
+       // Conexion enviar  = new Conexion();
         /*Crypto.setCifrado(pass_sign.getText());
 
         byte[] clave_segura = Crypto.getCifrado();*/
@@ -379,7 +379,7 @@ public class SignIN extends javax.swing.JFrame {
 
         String cadenaEncriptada = ecnodeMD5(secretKey, TXT_password.getText());
         
-        enviar.action_sigIN(TXT_name.getText(),TXT_lastname.getText(),TXT_ci.getText(),TXT_phone.getText(),CB_type.getSelectedItem().toString(),cadenaEncriptada,TXT_date.getText(),TXT_direction.getText(),TXT_email.getText());
+       // enviar.action_sigIN(TXT_name.getText(),TXT_lastname.getText(),TXT_ci.getText(),TXT_phone.getText(),CB_type.getSelectedItem().toString(),cadenaEncriptada,TXT_date.getText(),TXT_direction.getText(),TXT_email.getText());
                                 
     }//GEN-LAST:event_Accept_signActionPerformed
 

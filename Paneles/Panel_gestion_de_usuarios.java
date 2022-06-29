@@ -160,6 +160,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
             }
         });
         JT_usuarios.setComponentPopupMenu(PM_userInfo);
+        JT_usuarios.setEnabled(false);
         Panel_JS.setViewportView(JT_usuarios);
 
         javax.swing.GroupLayout panel_getLayout = new javax.swing.GroupLayout(panel_get);
@@ -217,7 +218,7 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
 
     private void PM_userInfoPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_PM_userInfoPopupMenuWillBecomeVisible
 
-        Fun_BTOmodificar instancia = new Fun_BTOmodificar(this.JT_usuarios,this.JT_usuarios.getMousePosition());
+        Fun_BTOmodificar instancia = new Fun_BTOmodificar(/*this.JT_usuarios,*/this.JT_usuarios.getMousePosition());
             instancia.setCI(instancia.capturaCI(this.JT_usuarios));    }//GEN-LAST:event_PM_userInfoPopupMenuWillBecomeVisible
 
     private void MI_userinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_userinfoActionPerformed

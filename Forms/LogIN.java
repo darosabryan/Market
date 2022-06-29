@@ -2,7 +2,9 @@
 package market2.Forms;
 
 import market2.Classes.Conexion;
+import static market2.Classes.Conexion.forms;
 import market2.Classes.Crypto;
+import market2.Classes.Fun_BTOmodificar;
 
 public class LogIN extends javax.swing.JFrame {
 
@@ -137,12 +139,17 @@ public class LogIN extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTO_acceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_acceptActionPerformed
+    Fun_BTOmodificar instancia = new Fun_BTOmodificar(null);
+           instancia.setCI(this.TXT_ci.getText().toString());
+           instancia.setCi_login(this.TXT_ci.getText().toString());
+
      Conexion connection = new Conexion();
      Crypto code = new  Crypto();
      
      String encode= code.ecnodeMD5("SomosProgramadores",this.TXT_pass.getText());
      connection.action_LogIN(this.TXT_ci.getText(), encode);   
-
+     
+    
     }//GEN-LAST:event_BTO_acceptActionPerformed
 
     /**

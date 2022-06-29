@@ -15,7 +15,7 @@ import market2.Classes.Ajustes.ajustes_LogIN;
 
 public class Forms_state {
 private static ajustes_form_admin main_form = new ajustes_form_admin();
-private static ajustes_LogIN login = new ajustes_LogIN();
+//private static ajustes_LogIN login = new ajustes_LogIN();
 private static SignIN signin =  new SignIN();
 private ajustes_Edit_date modificar = new ajustes_Edit_date();
 
@@ -24,11 +24,11 @@ public void state_main_form(boolean state){
   this.main_form.show(state);
   
   }
-  
+  /*
 public void state_LogIN(boolean state){
   this.login.show(state);
   
-  }  
+  }  */
  
 public void state_SignIN(boolean state){
   cargar_tipos();  

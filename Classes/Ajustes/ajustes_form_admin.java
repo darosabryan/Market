@@ -31,7 +31,8 @@ import market2.Paneles.Panel_gestion_de_usuarios;
 
 public class ajustes_form_admin extends main_form_admin {    
 //Medidas del form_admin    
-private JPanel foco;    
+private boolean onetime = true;    
+private JPanel foco=this.PANEL_perfil;    
 admin_form_dimensiones dimensiones = new admin_form_dimensiones();
 
 public JPanel contenedor = new JPanel(); 
@@ -86,7 +87,11 @@ public void animation_paneles(JPanel panel,JButton boton,ajustes_form_admin comp
     Color rgb_entrada = new Color(82, 99, 93 );
     Color rgb_salida = new Color(51,51,51);
     Color rgb_foco = new Color(84, 160, 133);
-
+    
+    
+    //Set animacion perfil como default
+    compt.foco.setBackground(rgb_foco);
+    
     MouseListener animation = new MouseListener(){
     //JPanel foco;
     @Override
@@ -96,6 +101,7 @@ public void animation_paneles(JPanel panel,JButton boton,ajustes_form_admin comp
 
     @Override
     public void mousePressed(MouseEvent me) {
+     
              try{
                  compt.foco.setBackground(rgb_salida);
                  compt.foco=panel;
@@ -106,7 +112,7 @@ public void animation_paneles(JPanel panel,JButton boton,ajustes_form_admin comp
                  compt.foco.setBackground(rgb_foco);
                 
              }
-                
+       onetime = false;         
               
     }
 
@@ -130,6 +136,8 @@ public void animation_paneles(JPanel panel,JButton boton,ajustes_form_admin comp
 };
 panel.addMouseListener(animation);
 boton.addMouseListener(animation);
+
+
 }
 
 public void animacion_close(){    
@@ -166,13 +174,29 @@ bto_form_admin_cerrar.addMouseListener(animation);
 public void add_paneles(){
     Gestor_Paneles instancia = new Gestor_Paneles();
 
-    this.add(instancia.get_GestorUsuarios());
-    instancia.get_GestorUsuarios().show(false);
+        this.add(instancia.get_GestorUsuarios());
+        instancia.get_GestorUsuarios().show(false);
 
-    this.add(instancia.get_GestorHorarios());
-    instancia.get_GestorHorarios().show(false);
+        this.add(instancia.get_GestorHorarios());
+        instancia.get_GestorHorarios().show(false);
 
+        this.add(instancia.getUsuario_perfil());
+        instancia.getUsuario_perfil().show(true);
 
+            admin_form_dimensiones dimension = new admin_form_dimensiones();
+
+                instancia.getUsuario_perfil().setLocation(dimension.getX_barra_tareas(),dimension.getY_barra_superiro());  
+
+            Fun_BTObuscar instancia2 = new Fun_BTObuscar(  instancia.getUsuario_perfil().JT_usuarios,  instancia.getUsuario_perfil().txt_buscar.getText(),  instancia.getUsuario_perfil().CB_lista.getSelectedItem().toString());
+
+            try {
+                    instancia2.additemtotable_busqueda(0,instancia2.filtrar(instancia2.carga_usuarios_busqueda()));
+
+            } catch (SQLException ex) {
+                Logger.getLogger(main_form_admin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+             this.repaint();
 }
 
 }

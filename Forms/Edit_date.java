@@ -214,7 +214,7 @@ public class Edit_date extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTO_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_editActionPerformed
-   Fun_BTOmodificar instancia = new Fun_BTOmodificar(null,null);
+   Fun_BTOmodificar instancia = new Fun_BTOmodificar(null);
    String nuevoHorario = this.CB_hour1.getSelectedItem().toString() + ":" + this.CB_minuts1.getSelectedItem().toString() + " - " + this.CB_hour2.getSelectedItem().toString()  + ":" + this.CB_minuts2.getSelectedItem().toString() ;
    //String update ="update comercio.horarios set " + instancia.getColumna() + "='" + nuevoHorario + "' where ci=" + instancia.getCI();
    String update= "update comercio.horarios as hor join comercio.usuarios as usu on hor.id = usu.id_horario set "+ instancia.getColumna() +"='"+ nuevoHorario +"' where usu.ci = " + instancia.getCI();

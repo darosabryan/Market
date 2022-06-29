@@ -8,17 +8,27 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import market2.Classes.Ajustes.ajustes_horarios;
 
-public class Fun_BTOmodificar extends ajustes_horarios{
+public class Fun_BTOmodificar /* extends ajustes_horarios*/{
 static private String ci;
+static private String ci_login;
+
 static private String columna;
 private JTable tabla;
 private Point location;
 
-public Fun_BTOmodificar(JTable tabla,Point location){
-this.tabla=tabla;
+public Fun_BTOmodificar(/*JTable tabla,*/Point location){
+//this.tabla=tabla;
 this.location=location;
  
 }    
+
+    public String getCi_login() {
+        return ci_login;
+    }
+
+    public void setCi_login(String ci_login) {
+        Fun_BTOmodificar.ci_login = ci_login;
+    }
 
 public String getCI(){
  return this.ci;
