@@ -164,12 +164,12 @@ private admin_form_dimensiones dimension = new admin_form_dimensiones();
                 .addGroup(panel_form_admin_barra_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(PANEL_gestionUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PANEL_perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PANEL_softwareAlmacen, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
+                    .addComponent(PANEL_softwareAlmacen, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(panel_form_admin_barra_tareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_form_admin_barra_tareasLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(panel_form_admin_horariosusu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_form_admin_horariosusu, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         panel_form_admin_barra_tareasLayout.setVerticalGroup(
@@ -195,8 +195,8 @@ private admin_form_dimensiones dimension = new admin_form_dimensiones();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_form_admin_barra_superior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panel_form_admin_barra_tareas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(862, 862, 862))
+                .addComponent(panel_form_admin_barra_tareas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(831, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,6 +224,7 @@ private admin_form_dimensiones dimension = new admin_form_dimensiones();
     private void bto_form_admin_horariosusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_form_admin_horariosusuActionPerformed
    
      paneles_state.get_GestorUsuarios().show(false);
+     paneles_state.getUsuario_perfil().show(false);
      paneles_state.get_GestorHorarios().show(true);
      
      paneles_state.get_GestorHorarios().setLocation(dimension.getX_barra_tareas(), dimension.getY_barra_superiro());  
@@ -245,6 +246,7 @@ private admin_form_dimensiones dimension = new admin_form_dimensiones();
     private void BTO_gestionUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_gestionUsuariosActionPerformed
    
      paneles_state.get_GestorHorarios().show(false);
+     paneles_state.getUsuario_perfil().show(false);
      paneles_state.get_GestorUsuarios().show(true);
     
      paneles_state.get_GestorUsuarios().setLocation(dimension.getX_barra_tareas(),dimension.getY_barra_superiro());  

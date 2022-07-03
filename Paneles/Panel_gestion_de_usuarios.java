@@ -13,9 +13,11 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import market2.Classes.Ajustes.ajustes_signIN;
 
 import market2.Classes.Fun_BTObuscar;
 import market2.Classes.Fun_BTOmodificar;
+import market2.Classes.Gestor_Paneles;
 
 /**
  *
@@ -107,6 +109,11 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
         BTO_register.setBorder(null);
         BTO_register.setContentAreaFilled(false);
         BTO_register.setFocusPainted(false);
+        BTO_register.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTO_registerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_setLayout = new javax.swing.GroupLayout(panel_set);
         panel_set.setLayout(panel_setLayout);
@@ -228,6 +235,15 @@ public class Panel_gestion_de_usuarios extends javax.swing.JPanel {
     private void MI_userinfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MI_userinfoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_MI_userinfoMouseClicked
+
+    private void BTO_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_registerActionPerformed
+    /*Gestor_Paneles instancia = new Gestor_Paneles();
+    instancia.get_GestorUsuarios().show(false);
+    instancia.getSigIN().show(true);*/
+    
+     ajustes_signIN signIN = new ajustes_signIN(); 
+      signIN.show(true);
+    }//GEN-LAST:event_BTO_registerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

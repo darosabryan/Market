@@ -28,7 +28,6 @@ import market2.Classes.Gestor_Paneles;
 import market2.Classes.admin_form_dimensiones;
 import market2.Paneles.Panel_gestion_de_usuarios;
 
-
 public class ajustes_form_admin extends main_form_admin {    
 //Medidas del form_admin    
 private boolean onetime = true;    
@@ -69,19 +68,21 @@ this.panel_form_admin_barra_tareas.setLocation(0, dimensiones.getY_barra_superir
   ajutando_barraTareas(0,dimensiones.getY_paneles_barraTareas()*3,dimensiones.getX_paneles_barraTareas(),dimensiones.getY_paneles_barraTareas(), this.PANEL_softwareAlmacen, new Color(51,51,51));
   animation_paneles(this.PANEL_softwareAlmacen,this.BTO_softwareAlmacen,this);
  
-animacion_close();
+    animacion_close();
 
-add_paneles();
+    add_paneles();
 }
 public void ajutando_barraTareas(int x_loca,int y_loca,int x_size,int y_size,JPanel panel,Color color){
 panel.setBounds(x_loca, y_loca, x_size , y_size);
 panel.setBackground(color);
 
 }
-
-public void carga_de_usarios(JTable tabla) throws SQLException{
+/*
+public void ajustando_contenedor(){
+   this.PANEL_contenedor.setLayout(null);
+   this.PANEL_contenedor.setBounds(dimensiones.getX_barra_tareas(),dimensiones.getY_barra_superiro(),dimensiones.getX_panel_contenedor(),dimensiones.getY_panel_contenedor());
    
-}
+}*/
 
 public void animation_paneles(JPanel panel,JButton boton,ajustes_form_admin compt){
     Color rgb_entrada = new Color(82, 99, 93 );
@@ -197,6 +198,12 @@ public void add_paneles(){
             }
 
              this.repaint();
+          /*   
+        this.PANEL_contenedor.add(instancia.getSigIN());
+        instancia.getSigIN().show(false);
+        
+ */
+        
 }
 
 }

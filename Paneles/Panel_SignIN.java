@@ -26,7 +26,7 @@ public class Panel_SignIN extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Accept_sign = new javax.swing.JButton();
+        BTO_Accept_sign = new javax.swing.JButton();
         PANEL_lastname = new javax.swing.JPanel();
         LBL_lastname = new javax.swing.JLabel();
         TXT_lastname = new javax.swing.JTextField();
@@ -54,11 +54,12 @@ public class Panel_SignIN extends javax.swing.JPanel {
         PANEL_password = new javax.swing.JPanel();
         LBL_password = new javax.swing.JLabel();
         TXT_password = new javax.swing.JPasswordField();
+        LBL_registrarse = new javax.swing.JLabel();
 
-        Accept_sign.setText("Accept");
-        Accept_sign.addActionListener(new java.awt.event.ActionListener() {
+        BTO_Accept_sign.setText("Accept");
+        BTO_Accept_sign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Accept_signActionPerformed(evt);
+                BTO_Accept_signActionPerformed(evt);
             }
         });
 
@@ -77,7 +78,7 @@ public class Panel_SignIN extends javax.swing.JPanel {
             .addGroup(PANEL_lastnameLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(LBL_lastname)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(29, 29, 29)
                 .addComponent(TXT_lastname, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -280,7 +281,7 @@ public class Panel_SignIN extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(LBL_password)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TXT_password, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                .addComponent(TXT_password, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
                 .addGap(29, 29, 29))
         );
         PANEL_passwordLayout.setVerticalGroup(
@@ -293,6 +294,9 @@ public class Panel_SignIN extends javax.swing.JPanel {
                 .addGap(14, 14, 14))
         );
 
+        LBL_registrarse.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        LBL_registrarse.setText("Registrarse");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -302,8 +306,8 @@ public class Panel_SignIN extends javax.swing.JPanel {
                     .addComponent(PANEL_email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PANEL_date, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(305, Short.MAX_VALUE)
-                        .addComponent(Accept_sign)
+                        .addContainerGap(308, Short.MAX_VALUE)
+                        .addComponent(BTO_Accept_sign)
                         .addGap(15, 15, 15))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -322,11 +326,17 @@ public class Panel_SignIN extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(PANEL_name, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(LBL_registrarse)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(20, 20, 20)
+                .addComponent(LBL_registrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PANEL_name, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(PANEL_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,12 +355,12 @@ public class Panel_SignIN extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addComponent(PANEL_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Accept_sign)
+                .addComponent(BTO_Accept_sign)
                 .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Accept_signActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Accept_signActionPerformed
+    private void BTO_Accept_signActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTO_Accept_signActionPerformed
 /*        Conexion enviar  = new Conexion();
         //Crypto.setCifrado(pass_sign.getText());
 
@@ -362,7 +372,7 @@ public class Panel_SignIN extends javax.swing.JPanel {
 
         enviar.action_sigIN(TXT_name.getText(),TXT_lastname.getText(),TXT_ci.getText(),TXT_phone.getText(),CB_type.getSelectedItem().toString(),cadenaEncriptada,TXT_date.getText(),TXT_direction.getText(),TXT_email.getText());
 */
-    }//GEN-LAST:event_Accept_signActionPerformed
+    }//GEN-LAST:event_BTO_Accept_signActionPerformed
 
     private void TXT_lastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TXT_lastnameActionPerformed
         // TODO add your handling code here:
@@ -382,33 +392,34 @@ public class Panel_SignIN extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Accept_sign;
-    private javax.swing.JComboBox<String> CB_type;
-    private javax.swing.JLabel LBL_ci;
-    private javax.swing.JLabel LBL_date;
-    private javax.swing.JLabel LBL_direccion;
-    private javax.swing.JLabel LBL_email;
-    private javax.swing.JLabel LBL_lastname;
-    private javax.swing.JLabel LBL_name;
-    private javax.swing.JLabel LBL_password;
-    private javax.swing.JLabel LBL_phone;
-    private javax.swing.JLabel LBL_type;
-    private javax.swing.JPanel PANEL_ci;
-    private javax.swing.JPanel PANEL_date;
-    private javax.swing.JPanel PANEL_direccion;
-    private javax.swing.JPanel PANEL_email;
-    private javax.swing.JPanel PANEL_lastname;
-    private javax.swing.JPanel PANEL_name;
-    private javax.swing.JPanel PANEL_password;
-    private javax.swing.JPanel PANEL_phone;
-    private javax.swing.JPanel PANEL_type;
-    private javax.swing.JTextField TXT_ci;
-    private javax.swing.JTextField TXT_date;
-    private javax.swing.JTextField TXT_direction;
-    private javax.swing.JTextField TXT_email;
-    private javax.swing.JTextField TXT_lastname;
-    private javax.swing.JTextField TXT_name;
-    private javax.swing.JPasswordField TXT_password;
-    private javax.swing.JTextField TXT_phone;
+    public javax.swing.JButton BTO_Accept_sign;
+    public javax.swing.JComboBox<String> CB_type;
+    public javax.swing.JLabel LBL_ci;
+    public javax.swing.JLabel LBL_date;
+    public javax.swing.JLabel LBL_direccion;
+    public javax.swing.JLabel LBL_email;
+    public javax.swing.JLabel LBL_lastname;
+    public javax.swing.JLabel LBL_name;
+    public javax.swing.JLabel LBL_password;
+    public javax.swing.JLabel LBL_phone;
+    public javax.swing.JLabel LBL_registrarse;
+    public javax.swing.JLabel LBL_type;
+    public javax.swing.JPanel PANEL_ci;
+    public javax.swing.JPanel PANEL_date;
+    public javax.swing.JPanel PANEL_direccion;
+    public javax.swing.JPanel PANEL_email;
+    public javax.swing.JPanel PANEL_lastname;
+    public javax.swing.JPanel PANEL_name;
+    public javax.swing.JPanel PANEL_password;
+    public javax.swing.JPanel PANEL_phone;
+    public javax.swing.JPanel PANEL_type;
+    public javax.swing.JTextField TXT_ci;
+    public javax.swing.JTextField TXT_date;
+    public javax.swing.JTextField TXT_direction;
+    public javax.swing.JTextField TXT_email;
+    public javax.swing.JTextField TXT_lastname;
+    public javax.swing.JTextField TXT_name;
+    public javax.swing.JPasswordField TXT_password;
+    public javax.swing.JTextField TXT_phone;
     // End of variables declaration//GEN-END:variables
 }

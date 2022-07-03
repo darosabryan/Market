@@ -134,9 +134,10 @@ try{
     consulta = miStatement.executeQuery("SELECT count(id) from horarios");
     consulta.next();
     String id_horario =consulta.getString("count(id)");
-      
-    miStatement.execute("insert into Usuarios(name,lastname,ci,phone,tipo,id_horario,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+","+id_horario+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
-
+      System.out.println(id_horario);
+     System.out.println("insert into Usuarios(name,lastname,ci,phone,tipo,id_horario,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+","+id_horario+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
+      miStatement.execute("insert into Usuarios(name,lastname,ci,phone,tipo,id_horario,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+","+id_horario+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
+ 
      if (existUSU(ci,pass)==true){
      System.out.println("Tu usuario fue creado correctamente");
      }

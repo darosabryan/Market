@@ -25,9 +25,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="panel_form_admin_barra_superior" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="panel_form_admin_barra_tareas" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="862" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="panel_form_admin_barra_tareas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="831" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,14 +109,14 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="PANEL_gestionUsuarios" max="32767" attributes="0"/>
                       <Component id="PANEL_perfil" alignment="1" max="32767" attributes="0"/>
-                      <Component id="PANEL_softwareAlmacen" alignment="1" pref="168" max="32767" attributes="0"/>
+                      <Component id="PANEL_softwareAlmacen" alignment="1" pref="199" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panel_form_admin_horariosusu" max="32767" attributes="0"/>
+                      <Component id="panel_form_admin_horariosusu" pref="199" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>

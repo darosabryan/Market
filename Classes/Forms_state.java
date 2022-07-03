@@ -1,7 +1,6 @@
 
 package market2.Classes;
 
-import market2.Forms.SignIN;
 import market2.Forms.main_form_admin;
 import market2.Forms.LogIN;
 import market2.Classes.Ajustes.ajustes_form_admin;
@@ -12,27 +11,15 @@ import java.sql.Statement;
 import javax.swing.ImageIcon;
 import market2.Classes.Ajustes.ajustes_Edit_date;
 import market2.Classes.Ajustes.ajustes_LogIN;
+import market2.Classes.Ajustes.ajustes_signIN;
 
 public class Forms_state {
 private static ajustes_form_admin main_form = new ajustes_form_admin();
-//private static ajustes_LogIN login = new ajustes_LogIN();
-private static SignIN signin =  new SignIN();
 private ajustes_Edit_date modificar = new ajustes_Edit_date();
 
 
 public void state_main_form(boolean state){
   this.main_form.show(state);
-  
-  }
-  /*
-public void state_LogIN(boolean state){
-  this.login.show(state);
-  
-  }  */
- 
-public void state_SignIN(boolean state){
-  cargar_tipos();  
-  this.signin.show(state);
   
   }
 
@@ -48,6 +35,7 @@ public void state_ajustes_Edit_date(boolean state){
 
 }
 
+/*
 public void cargar_tipos(){
 try{
  Connection miConexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/comercio", "root", "");
@@ -60,7 +48,7 @@ try{
   System.out.println(consulta.getString("nombre_tipo"));
   this.signin.CB_type.addItem(consulta.getString("nombre_tipo"));
  
- } 
+ }
  
  
  
@@ -69,6 +57,8 @@ catch(Exception e){
  System.out.println("Error al cargar los tipos de usuario");
 
 }
+
 }
+*/
 
 }

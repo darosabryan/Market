@@ -60,8 +60,7 @@ public class ajustes_horarios extends Panel_horarios{
          
 public ajustes_horarios(){
     this.setLayout(null);
-    this.setSize(dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());
-       
+    this.setBounds(0,0,dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());       
     panel_set();
     panel_get();
 

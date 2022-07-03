@@ -37,8 +37,7 @@ public class ajustes_gestion_usuarios extends Panel_gestion_de_usuarios{
    
    public void Panel_main(){
      this.setLayout(null);
-     this.setSize(dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());
-    
+     this.setBounds(0,0,dimension.getX_panel_contenedor(), dimension.getY_panel_contenedor());
    }  
     
    public void panelSet(){
@@ -232,7 +231,7 @@ public void cargando_userInfo(){
             set_ci(instancia.get_ci());
             set_date(instancia.get_date());
             set_direction(instancia.get_direction());
-            set_phone(instancia.get_phone());
+            set_phone("0"+instancia.get_phone());
             set_email(instancia.get_email());
             set_nombreTipo(instancia.get_nombre_tipo());
             
