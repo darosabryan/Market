@@ -31,7 +31,7 @@ return "select usu.ci,usu.name,usu.lastname,t_usu.nombre_tipo FROM usuarios as u
 }
 //tengo que obtener la cedula dependiendo de la id_horarios que le corresponda a cada usuario
 public String carga_usuarios_horarios(){
-return  "select usu.ci, usu.lastname, hor.lun, hor.mar, hor.mie, hor.jue, hor.vie, hor.sab, hor.dom from usuarios as usu join horarios as hor where usu.id_horario=hor.id";
+return  "select usu.ci, usu.lastname, hor.lun, hor.mar, hor.mie, hor.jue, hor.vie, hor.sab, hor.dom from usuarios as usu join horarios as hor where usu.ci=hor.id";
 
 }
 

@@ -128,15 +128,18 @@ try{
       
 
     if (existUSU(ci,pass)==false){
-    miStatement.execute("insert into horarios(lun,mar,mie,jue,vie,sab,dom) values('--','--','--','--','--','--','--')");
+    miStatement.execute("insert into horarios(id,lun,mar,mie,jue,vie,sab,dom) values("+ ci +",'--','--','--','--','--','--','--')");
 
     //Agarrar el ultimo id del ultmio horario creado en la tabla horairos y guardarlo en la variable id_horario
+   /*
     consulta = miStatement.executeQuery("SELECT count(id) from horarios");
     consulta.next();
     String id_horario =consulta.getString("count(id)");
-      System.out.println(id_horario);
-     System.out.println("insert into Usuarios(name,lastname,ci,phone,tipo,id_horario,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+","+id_horario+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
-      miStatement.execute("insert into Usuarios(name,lastname,ci,phone,tipo,id_horario,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+","+id_horario+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
+    */
+      
+     System.out.println("insert into Usuarios(name,lastname,ci,phone,tipo,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
+     //Crear condicional que verifique que el horario correspondiente este creado
+     miStatement.execute("insert into Usuarios(name,lastname,ci,phone,tipo,password,date,direction,email) values('"+name+"','"+lastname+"',"+ci+","+phone+","+id_tipo+",'"+pass+"',"+date+",'"+direction+"','"+email+"')");
  
      if (existUSU(ci,pass)==true){
      System.out.println("Tu usuario fue creado correctamente");
