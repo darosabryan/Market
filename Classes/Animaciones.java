@@ -7,6 +7,7 @@ import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -72,8 +73,8 @@ BTO_close.addMouseListener(animation);
 
 }    
 
-public void Windows_look_and_feel(int x,int y,JPanel Panel_main,JFrame frame){
-    
+public void Windows_look_and_feel(int x,int y,JLayeredPane Panel_main,JFrame frame){
+      
     frame.setLayout(null);
     frame.setSize(x,y);
     
@@ -95,10 +96,12 @@ public void Windows_look_and_feel(int x,int y,JPanel Panel_main,JFrame frame){
      BTO_close.setIcon(new ImageIcon("C:\\Users\\Raul Games\\Documents\\NetBeansProjects\\Market2\\src\\market2\\imagenes\\window-close.png"));
    
      animacion_close(BTO_close);
-     
+  
     Panel_main.setLayout(null);
     Panel_main.setBounds(0,barra_superior.getHeight(), frame.getWidth(), frame.getHeight()- barra_superior.getHeight());
    // Panel_main.setBackground(new Color(135, 130, 129));
-} 
+
+    }
+    
 
 }

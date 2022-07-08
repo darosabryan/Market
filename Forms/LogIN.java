@@ -24,7 +24,7 @@ public class LogIN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PANEL_main = new javax.swing.JPanel();
+        PANEL_main = new javax.swing.JLayeredPane();
         PANEL_ci = new javax.swing.JPanel();
         LBL_ci = new javax.swing.JLabel();
         TXT_ci = new javax.swing.JTextField();
@@ -90,6 +90,10 @@ public class LogIN extends javax.swing.JFrame {
             }
         });
 
+        PANEL_main.setLayer(PANEL_ci, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        PANEL_main.setLayer(PANEL_pass, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        PANEL_main.setLayer(BTO_accept, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout PANEL_mainLayout = new javax.swing.GroupLayout(PANEL_main);
         PANEL_main.setLayout(PANEL_mainLayout);
         PANEL_mainLayout.setHorizontalGroup(
@@ -105,7 +109,7 @@ public class LogIN extends javax.swing.JFrame {
                     .addGroup(PANEL_mainLayout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(BTO_accept)))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PANEL_mainLayout.setVerticalGroup(
             PANEL_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +117,7 @@ public class LogIN extends javax.swing.JFrame {
                 .addComponent(PANEL_ci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PANEL_pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BTO_accept)
                 .addGap(33, 33, 33))
         );
@@ -122,16 +126,17 @@ public class LogIN extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(PANEL_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(PANEL_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PANEL_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PANEL_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
         pack();
@@ -192,7 +197,7 @@ public class LogIN extends javax.swing.JFrame {
     public javax.swing.JLabel LBL_ci;
     public javax.swing.JLabel LBL_pass;
     public javax.swing.JPanel PANEL_ci;
-    public javax.swing.JPanel PANEL_main;
+    public javax.swing.JLayeredPane PANEL_main;
     public javax.swing.JPanel PANEL_pass;
     public javax.swing.JTextField TXT_ci;
     public javax.swing.JPasswordField TXT_pass;

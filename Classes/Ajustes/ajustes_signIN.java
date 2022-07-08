@@ -9,7 +9,6 @@ import javax.swing.JTextField;
 import market2.Classes.Animaciones;
 import market2.Classes.admin_form_dimensiones;
 import market2.Forms.SignIN;
-import market2.Paneles.Panel_SignIN;
 
 public class ajustes_signIN extends SignIN{
     
@@ -61,15 +60,20 @@ public class ajustes_signIN extends SignIN{
     
     inst.setTxt(this.TXT_date);
     cargando_componenetes(this.PANEL_date,this.LBL_date,inst);
-    
+        this.TXT_date.setSize(this.TXT_date.getWidth() - 25,this.TXT_date.getHeight());
+        this.BTO_calendar.setBounds(this.PANEL_date.getWidth() - 25, 0, 25, 25);
+   
     inst.setTxt(this.TXT_direction);
     cargando_componenetes(this.PANEL_direccion,this.LBL_direccion,inst);
     
     inst.setTxt(this.TXT_password);
     cargando_componenetes(this.PANEL_password,this.LBL_password,inst);
-    
-    
+     
     this.BTO_aceptar.setLocation(this.PANEL_password.getLocation().x + this.PANEL_password.getWidth() - this.BTO_aceptar.getWidth(),this.PANEL_password.getLocation().y + this.PANEL_password.getHeight()+ 10 );
+   
+    this.JCAL_date.show(false);
+    this.JCAL_date.setLocation(this.PANEL_date.getWidth() + this.PANEL_date.getLocation().x - this.JCAL_date.getWidth(),this.PANEL_date.getLocation().y + this.PANEL_date.getHeight());
+    
     }
     
    public void cargando_componenetes(JPanel contenedor,JLabel lbl, txt_o_box comp){
@@ -138,4 +142,10 @@ public class ajustes_signIN extends SignIN{
     }
 
 }
+   
+public void fecha(){
+
+
+}   
+   
 }
